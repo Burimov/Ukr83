@@ -26,8 +26,8 @@ def bouquets(narcissus_price, tulip_price, rose_price, summ):
     for i in range(narcissus_amount + 1):
         for j in range(tulip_amount + 1):
             for k in range(rose_amount + 1):
-                if (narcissus_price*i + tulip_price*j + rose_price*k) <= summ:
-                    print ('n'*i + 't'*j + 'r'*k), (str(i) + ' n ' + str(j) + ' t ' + str(k) + ' r ')
+                if (narcissus_price*i + tulip_price*j + rose_price*k) <= summ and (i + j + k) != 0 and (i+ j + k)%2 !=0:
+                    # print ('n'*i + 't'*j + 'r'*k), (str(i) + ' n ' + str(j) + ' t ' + str(k) + ' r '), (narcissus_price*i + tulip_price*j + rose_price*k), summ
                     total_amount += 1
 
 
@@ -35,4 +35,4 @@ def bouquets(narcissus_price, tulip_price, rose_price, summ):
     return total_amount
 
 
-print bouquets(2, 3, 4, 10)
+print bouquets(200, 300, 400, 100000)
